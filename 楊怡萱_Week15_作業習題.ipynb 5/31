@@ -1,0 +1,342 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8.5"
+    },
+    "colab": {
+      "name": "楊怡萱 - Week14- 作業習題.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/A109010052/Computational-Thinking-and-Program-Design/blob/main/%E6%A5%8A%E6%80%A1%E8%90%B1_Week15_%E4%BD%9C%E6%A5%AD%E7%BF%92%E9%A1%8C.ipynb%205/31\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4WjiuMOj3ttZ"
+      },
+      "source": [
+        "**隨堂練習1： BMI 計算**\n",
+        "\n",
+        "請寫一個程式讓使用者輸入身高與體重，顯示BMI 值與肥胖程度。 BMI 等於體重（KG）除以身高（M）的平方，而BMI 與肥胖分類標準如下：\n",
+        "\n",
+        "若BMI 值小於18，則顯示「體重過輕」，否則若BMI 值小於24，則顯示「體重正常」，若BMI 值小於27，則顯示「體重過重」，否則顯示「體重肥胖」。"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "fYh_bbiY3ttc"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CL_gdlEa3ttd"
+      },
+      "source": [
+        "**隨堂練習2： 三一律(單向選擇、雙向與巢狀選擇、多向選擇)**\n",
+        "\n",
+        "請輸入一個數，然後判斷這個數是正數、是負數或者是零。"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "__cgNR1j3ttd",
+        "outputId": "51527ae4-a88d-4d01-a493-9b9553d3c25f"
+      },
+      "source": [
+        "num = int(input(\"pick a number:\"))\n",
+        "if num > 0:\n",
+        "    print(\"your number is positive\")\n",
+        "if num < 0:\n",
+        "    print(\"your number is negative\")\n",
+        "if num ==0:\n",
+        "    print(\"your number is zero\")\n",
+        "print(\"finished\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "pick a number:9\n",
+            "your number is positive\n",
+            "finished\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZkoU3gpPNCKr",
+        "outputId": "846fb5b9-58b6-42d3-f598-8ed32ce4dd8f"
+      },
+      "source": [
+        "num = int(input(\"pick a number:\"))\n",
+        "if num > 0:\n",
+        "    print(\"your number is positive\")\n",
+        "else:\n",
+        "    if num <0:\n",
+        "        print(\"your number is negative\")\n",
+        "    else:\n",
+        "        print(\"ypur number is zero\")\n",
+        "print(\"finished\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "pick a number:0\n",
+            "ypur number is zero\n",
+            "finished\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ICGzjy8eNLlR",
+        "outputId": "a2afdc87-75cb-444a-e88e-410f373a00c8"
+      },
+      "source": [
+        "num = int(input(\"pick a number:\"))\n",
+        "if num >0:\n",
+        "    print(\"your number is positive\")\n",
+        "elif num <0:\n",
+        "    print(\"your number is negative\")\n",
+        "else:\n",
+        "    print(\"your number is zero\")\n",
+        "print(\"finished\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "pick a number:-1\n",
+            "your number is negative\n",
+            "finished\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Dz83GY2d3ttd"
+      },
+      "source": [
+        "**練習5   體溫與發燒**\n",
+        "\n",
+        "設計程式根據體溫判斷是否發燒，由使用者輸入體溫，程式判斷是否發燒，假設體溫小於36度，顯示「體溫過低」，體溫大於等於36度小於38度，顯示「體溫正常」，否則若體溫大於等於38度小於39度，顯示「體溫有點燒」，否則體溫大於等於39度，顯示「體溫很燒」。\n",
+        "\n",
+        "輸入體溫「36.5」，輸出為「體溫正常」。\n",
+        "\n",
+        "～程式執行結果如下。\n",
+        "\n",
+        "請輸入體溫？36.5\n",
+        "\n",
+        "體溫正常"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4t4Kf6vm3tte",
+        "outputId": "8cae1367-dab4-4c6d-f09c-c753ba9224a5"
+      },
+      "source": [
+        "degree = 36.5\n",
+        "if degree <36:\n",
+        "    print(\"low\")\n",
+        "elif degree <38: # 36 < = degree < 38\n",
+        "    print(\"normal\")\n",
+        "elif degree < 39: ## 38 <= degree < 39\n",
+        "    print(\"a bit of high\")\n",
+        "else:\n",
+        "    print(\"fever\")"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "normal\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "E8jwQCcP3tte"
+      },
+      "source": [
+        "**練習6  閏年判斷**\n",
+        "\n",
+        "設計程式允許輸入西元幾年，請求出該年是否是閏年，閏年表示該年多一天，若為4的倍數稱做閏年，但若為100的倍數就不為閏年，且若為400倍數又是閏年。(四年一潤、百年不潤、四百年再潤)\n",
+        "\n",
+        "輸入年份「2012」，輸出為「2012是閏年」。\n",
+        "\n",
+        "～程式執行結果如下。\n",
+        "\n",
+        "請輸入年份？2012\n",
+        "\n",
+        "2012 是閏年"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "fjzoOI9D3tte",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "030e6419-e77d-4a89-af30-937c2c8f347b"
+      },
+      "source": [
+        "year=2021\n",
+        "\n",
+        "if  year  %  400 == 0:\n",
+        "     print(\"是閨年\")\n",
+        "elif year % 100 == 0:\n",
+        "       print(\"不是閨年\")\n",
+        "elif year % 4 == 0:\n",
+        "       print(\"是閨年\")\n",
+        "else :\n",
+        "        print(\"不是閨年\")"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "不是閨年\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "sWEV9zQi3ttf"
+      },
+      "source": [
+        "**練習12：計程車計費**\n",
+        "\n",
+        "某城市計程車計費3公里以內6元，超過3公里不足10公里、每公里1.8元，超過10公里則超過部分加收50%。此外停車等候每3分鐘收1元，請用Python寫出車費是多少。"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u7X-I8la_7cV",
+        "outputId": "9089cc48-2916-45d6-c150-6caa3a43e9b4"
+      },
+      "source": [
+        "length = int(input(\"請輸入距離：\"))\n",
+        "time = int(input(\"請輸入時間：\"))\n",
+        "if length >= 10:\n",
+        "   feight = 6 + (10 - 3) *1.8 + (length - 10) * 1.8 * 1.5\n",
+        "else:\n",
+        "       if length >= 3:\n",
+        "           feight = 6 + (length - 3) * 1.8\n",
+        "       else:\n",
+        "               feight  = 6\n",
+        "feight = feight + (time / 3) *1\n",
+        "print(\"計程車費是\", feight)"
+      ],
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "請輸入距離：4\n",
+            "請輸入時間：2\n",
+            "計程車費是 8.466666666666667\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ejvOX0Ly3ttf"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "EJjchAv93ttf"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
